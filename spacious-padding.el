@@ -442,12 +442,10 @@ hooks that pass one or more arguments to it, such as
           (frame-parameter nil 'right-divider-width)))
   (unless spacious-padding--fringe-width
     (setq spacious-padding--fringe-width 8)) ; 8 is the default per `fringe-mode'
-  (unless spacious-padding--left-fringe-width
-    (setq spacious-padding--left-fringe-width
-          (frame-parameter nil 'left-fringe-width)))
-  (unless spacious-padding--right-fringe-width
-    (setq spacious-padding--right-fringe-width
-          (frame-parameter nil 'right-fringe-width)))
+  (setq spacious-padding--left-fringe-width
+        (frame-parameter nil 'left-fringe))
+  (setq spacious-padding--right-fringe-width
+        (frame-parameter nil 'right-fringe))
   (unless spacious-padding--scroll-bar-width
     (setq spacious-padding--scroll-bar-width
           (frame-parameter nil 'scroll-bar-width))))
